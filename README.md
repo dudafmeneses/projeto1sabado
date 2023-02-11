@@ -7,3 +7,7 @@
 ## entrar no projeto
 
 ``` cd projeto1sabado ```
+
+## criar o banco de dados
+
+``` rails db:prepare ```
