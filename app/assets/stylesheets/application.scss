@@ -1,0 +1,17 @@
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+body{
+    background-color: black;
+    color: white;
+}
+a{
+    color:aqua;
+}
+a:hover{
+    color:white;
+}
+
+.edit-table{
+    color: white
+}

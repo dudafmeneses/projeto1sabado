@@ -1,6 +1,6 @@
 <h1>Posts</h1>
-<%= link_to "Crie um post", new_post_path %>
-<table>
+<%= link_to "Crie um post", new_post_path, class: "btn btn-outline-primary" %>
+<table class = "table edit-table">
     <thead>
         <tr>
             <th>Tittle</th>
@@ -12,9 +12,9 @@
             <tr>
                 <td><%= post.title %></td>
                 <td><%= post.body %></td>
-                <td><%= link_to 'Show',post %></td>
-                <td><%= link_to 'Edit',edit_post_path(post) %></td>
-                <td><%= button_to 'Delete',post,method: :delete %></td>
+                <td><%= link_to 'Show',post,class: "btn btn-outline-success"%></td>
+                <td><%= link_to 'Edit',edit_post_path(post), class: "btn btn-outline-warning" %></td>
+                <td><%= button_to 'Delete',post,method: :delete, class:"btn btn-outline-danger"%></td>
             </tr>
         <% end %>
     </tbody>
