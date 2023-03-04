@@ -1,0 +1,4 @@
+<h1>Visualização do <%= @post.id%>º post</h1>
+<h2> <%= @post.title %> </h2>
+<p><%= @post.body %></p>
+<%= link_to 'Editar este post', edit_post_path(@post) %>
