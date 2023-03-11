@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Meu site</h1>
+<p>aaaaaaaaaaaaaaaa</p>
+<% if current_user %>
+    <p> Olá <%= current_user.email %></p>
+    <p> logado com sucesso </p>
+    <% if current_user.admin? %>
+        <h1>tem <%= User.count %> usuários na aplicação</h1>
+    <% end %>
+    <%= link_to 'Sair', destroy_user_session_path, 'data-turbo-method': :delete %>
+<% else %>
+    <p> Não está logado </p>
+    <%= link_to 'Logar', new_user_session_path %>
+    <%= link_to 'Criar conta', new_user_registration_path %>
+<% end %>
